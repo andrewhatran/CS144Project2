@@ -316,9 +316,12 @@ class MyParser {
         if (desc.length() > 4000)
                     desc = desc.substring(0, 4000);
 
+        Element user = getElementByTagNameNR(item, "Seller");
+        String user_id = user.getAttribute("UserID");
+
 
          /* Write Out Item data */
-        itemWriter.write(formatStrings(item_id, name, buy_price, first_bid, currently, number_of_bids, started, ends, desc));
+        itemWriter.write(formatStrings(item_id, name, user_id, buy_price, first_bid, currently, number_of_bids, started, ends, desc));
         itemWriter.newLine();
 
 
@@ -327,8 +330,6 @@ class MyParser {
         /* ----------------*/
 
         /* Parse all relevant User data */
-        Element user = getElementByTagNameNR(item, "Seller");
-        String user_id = user.getAttribute("UserID");
         String rating = user.getAttribute("Rating");
         String location = getElementText(getElementByTagNameNR(item, "Location"));
         String country = getElementText(getElementByTagNameNR(item, "Country"));

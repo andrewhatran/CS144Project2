@@ -5,12 +5,11 @@ Andrew Tran (004 188 159)
 
 1.
 
-Item( ItemID, Name, Description, Seller, Buy_Price, First_Bid, Currently, Number_of_Bids, Started, Ends) 
+Item( ItemID, Name, UserID, Buy_Price, First_Bid, Currently, Number_of_Bids, Started, Ends, Description) 
 	Primary Key: ItemID
 
 
-Category(ItemID, CategoryID)
- 	Primary Key: ItemID, CategoryID
+Category(ItemID, Category)
 
 
 Bid(Bidder, ItemID, Time, Amount)
