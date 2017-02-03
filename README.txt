@@ -13,7 +13,7 @@ Category(ItemID, CategoryID)
  	Primary Key: ItemID, CategoryID
 
 
-Bid(Bidder, ItemID, userID, Time, Amount)
+Bid(Bidder, ItemID, Time, Amount)
 	Primary Key: Bidder, ItemID, Time
 
 
